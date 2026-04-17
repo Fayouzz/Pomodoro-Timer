@@ -1,0 +1,67 @@
+.orbs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  transition: background-color 1.2s ease, transform 1.2s ease;
+}
+
+/* Orb 1 — top-left, session-colored */
+.orb1 {
+  width: 520px;
+  height: 520px;
+  top: -160px;
+  left: -160px;
+  animation: drift1 18s ease-in-out infinite alternate;
+}
+.orb1[data-session="work"]  { background: var(--accent-work); }
+.orb1[data-session="short"] { background: var(--accent-short); }
+.orb1[data-session="long"]  { background: var(--accent-long); }
+
+/* Orb 2 — bottom-right, session-colored */
+.orb2 {
+  width: 400px;
+  height: 400px;
+  bottom: -120px;
+  right: -120px;
+  animation: drift2 22s ease-in-out infinite alternate;
+}
+.orb2[data-session="work"]  { background: var(--accent-work); opacity: 0.18; }
+.orb2[data-session="short"] { background: var(--accent-short); opacity: 0.18; }
+.orb2[data-session="long"]  { background: var(--accent-long); opacity: 0.18; }
+
+/* Orb 3 — static mid purple anchor */
+.orb3 {
+  width: 300px;
+  height: 300px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #6b21a8;
+  opacity: 0.12;
+}
+
+/* Noise overlay for depth */
+.noise {
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+
+@keyframes drift1 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(40px, 30px) scale(1.08); }
+}
+
+@keyframes drift2 {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(-30px, -40px) scale(1.1); }
+}

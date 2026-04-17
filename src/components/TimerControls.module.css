@@ -1,0 +1,64 @@
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+/* Primary button — large play/pause */
+.btnPrimary {
+  width: 72px;
+  height: 72px;
+  background: var(--accent-current);
+  color: var(--bg-primary);
+  box-shadow:
+    0 0 0 0 var(--accent-current-glow),
+    0 8px 32px var(--accent-current-glow);
+}
+
+.btnPrimary:hover {
+  transform: scale(1.07);
+  box-shadow:
+    0 0 0 8px var(--accent-current-glow),
+    0 12px 40px var(--accent-current-glow);
+}
+
+.btnPrimary:active {
+  transform: scale(0.96);
+}
+
+/* Secondary buttons — reset / skip */
+.btnSecondary {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-accent);
+}
+
+.btnSecondary:hover {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  transform: scale(1.05);
+}
+
+.btnSecondary:active {
+  transform: scale(0.96);
+}
+
+@media (max-width: 360px) {
+  .btnPrimary { width: 64px; height: 64px; }
+  .btnSecondary { width: 44px; height: 44px; }
+}

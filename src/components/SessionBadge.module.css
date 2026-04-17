@@ -1,0 +1,42 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 6px 16px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-accent);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease both;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent-current);
+  transition: background var(--transition-slow);
+  box-shadow: 0 0 8px var(--accent-current-glow);
+
+  /* Pulse animation */
+  position: relative;
+}
+.dot::after {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: var(--accent-current);
+  opacity: 0.4;
+  animation: pulse-ring 1.8s ease-out infinite;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color var(--transition-slow);
+}
