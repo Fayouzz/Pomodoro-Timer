@@ -1,12 +1,12 @@
-# 🍅 Pomodoro Timer
+# Pomodoro Timer
 
-A beautifully crafted, fully accessible Pomodoro Timer built with **React** and **Vite**. Designed with a deep cosmic noir aesthetic, responsive across all screen sizes.
+Pomodoro Timer built with **React** and **Vite**. Responsive across all screen sizes.
 
 ![Pomodoro Timer](https://img.shields.io/badge/React-18-61DAFB?logo=react) ![Vite](https://img.shields.io/badge/Vite-4-646CFF?logo=vite) ![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
-## ✨ Features
+## Features
 
 - **Start / Pause / Resume** — full control over the timer with persistent state
 - **Skip Session** — jump to the next session at any time
@@ -24,7 +24,7 @@ A beautifully crafted, fully accessible Pomodoro Timer built with **React** and 
 
 ---
 
-## 🗂 Project Structure
+## Project Structure
 
 ```
 pomodoro-timer/
@@ -64,8 +64,6 @@ pomodoro-timer/
 
 ---
 
-## 🚀 Getting Started
-
 ### Prerequisites
 
 - **Node.js** >= 16
@@ -102,20 +100,20 @@ npm run preview
 
 ---
 
-## ⚙️ Default Configuration
+## Default Configuration
 
-| Setting | Default | Range |
-|---|---|---|
-| Focus Duration | 25 min | 1 – 90 |
-| Short Break | 5 min | 1 – 30 |
-| Long Break | 15 min | 1 – 60 |
-| Sessions per Cycle | 4 | 2 – 8 |
+| Setting            | Default | Range  |
+| ------------------ | ------- | ------ |
+| Focus Duration     | 25 min  | 1 – 90 |
+| Short Break        | 5 min   | 1 – 30 |
+| Long Break         | 15 min  | 1 – 60 |
+| Sessions per Cycle | 4       | 2 – 8  |
 
 Settings are persisted to `localStorage` and restored on next visit.
 
 ---
 
-## ♿ Accessibility
+## Accessibility
 
 - All interactive elements have descriptive `aria-label` attributes
 - Timer uses `role="timer"` and `aria-live="polite"` regions for screen-reader announcements
@@ -126,15 +124,15 @@ Settings are persisted to `localStorage` and restored on next visit.
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
-| Tool | Purpose |
-|---|---|
-| React 18 | UI framework |
-| Vite 4 | Build tool + dev server |
-| CSS Modules | Scoped component styles |
+| Tool          | Purpose                         |
+| ------------- | ------------------------------- |
+| React 18      | UI framework                    |
+| Vite 4        | Build tool + dev server         |
+| CSS Modules   | Scoped component styles         |
 | Web Audio API | Synthesized notification sounds |
-| localStorage | Settings persistence |
+| localStorage  | Settings persistence            |
 
 ---
 
